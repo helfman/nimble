@@ -17,9 +17,10 @@ name: Linux Build
 on:
   push:
     branches:
-      - "main"
+      - "test_workflow"
 
   pull_request:
+
 
 permissions:
   contents: read
@@ -31,7 +32,7 @@ concurrency:
 jobs:
   ubuntu-release:
     runs-on: ubuntu-latest
-    if: ${{ github.repository == 'facebookincubator/nimble' }}
+    if: ${{ github.repository == 'helfman/nimble' }}
     name: "Ubuntu Build"
     env:
       CCACHE_DIR: "${{ github.workspace }}/.ccache"

@@ -18,6 +18,7 @@ project(Nimble)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
+add_definitions(-DFOLLY_HAVE_CLOCK_GETTIME)
 
 add_compile_definitions(DISABLE_META_INTERNAL_COMPRESSOR=1)
 
